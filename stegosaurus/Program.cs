@@ -1,1 +1,2 @@
-﻿Console.WriteLine("Hello, World!");
+﻿Console.SetCursorPosition(200, 10);
+Console.WriteLine('@');
