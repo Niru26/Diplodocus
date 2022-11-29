@@ -8,26 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\nikol\\.nuget\\packages\\": {}
+    "C:\\Users\\Nikolay\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Geekbrains\\Geekbrains_Developer_career\\20221127_C_Sharp_study\\dinosaurus\\sauropods\\diplodoc\\diplodoc.csproj",
+      "projectUniqueName": "D:\\Geekbrains\\20221106_Profession_Developer\\20221129_C_sharp_basics\\dynosaurus\\Zauropods\\diplodoc\\diplodoc.csproj",
       "projectName": "diplodoc",
-      "projectPath": "D:\\Geekbrains\\Geekbrains_Developer_career\\20221127_C_Sharp_study\\dinosaurus\\sauropods\\diplodoc\\diplodoc.csproj",
-      "packagesPath": "C:\\Users\\nikol\\.nuget\\packages\\",
-      "outputPath": "D:\\Geekbrains\\Geekbrains_Developer_career\\20221127_C_Sharp_study\\dinosaurus\\sauropods\\diplodoc\\obj\\",
+      "projectPath": "D:\\Geekbrains\\20221106_Profession_Developer\\20221129_C_sharp_basics\\dynosaurus\\Zauropods\\diplodoc\\diplodoc.csproj",
+      "packagesPath": "C:\\Users\\Nikolay\\.nuget\\packages\\",
+      "outputPath": "D:\\Geekbrains\\20221106_Profession_Developer\\20221129_C_sharp_basics\\dynosaurus\\Zauropods\\diplodoc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Nikolay\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
