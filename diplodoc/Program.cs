@@ -29,4 +29,5 @@ while (count < 10000) {
     Console.WriteLine("X");
     count++;
 };
+Console.SetCursorPosition(0, 31);
 

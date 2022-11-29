@@ -1,2 +1,3 @@
-﻿Console.SetCursorPosition(200, 10);
-Console.WriteLine('@');
+﻿Console.Clear();
+Console.SetCursorPosition(0, 0);
+Console.WriteLine('#');
