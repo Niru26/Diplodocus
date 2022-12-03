@@ -23,50 +23,61 @@ int requestData() {
 // Console.WriteLine("");
 
 //Task 4
-// int makeArray(int quntity) {
-//     int[] dataToCompare = new int[quntity];
-//     int counter = 0;
+Console.WriteLine("Task 4");
 
-//     while (counter < quntity) {
-//         int arrayValue = requestData();
-//         dataToCompare[counter] = arrayValue;
-        
-//         counter++;
-//     }
+int[] makeArray(int quntity) {
+    int[] dataToCompare = new int[quntity];
+    int counter = 0;
 
-//     return dataToCompare;
-// }
-
-// int generatedArray = makeArray(3);
-
-int[] dataToCompare = new int[3];
-int counter = 0;
-
-while(counter < 3) {
+    while (counter < quntity) {
         int arrayValue = requestData();
         dataToCompare[counter] = arrayValue;
+        
         counter++;
+    }
+
+    return dataToCompare;
 }
 
-// Console.WriteLine($"This is Long time searched value - ${dataToCompare.Length}");
-    
-// void printArray(int[] array){
-//     int counter = 0;
-//     while(counter < array.Length) {
-//     Console.WriteLine($"This is {counter} number of array - {array[counter]}");
-//     counter++;
-//     }
+Console.WriteLine("Enter array size and .");
+int[] generatedArray = makeArray(requestData());
+
+Console.WriteLine("");
+void printArray(int[] array){
+    int counter = 0;
+    while(counter < array.Length) {
+    Console.WriteLine($"This is {counter} number of array - {array[counter]}");
+    counter++;
+    }
+}
+
+printArray(generatedArray);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// int[] dataToCompare = new int[3];
+// int counter = 0;
+// while(counter < 3) {
+//         int arrayValue = requestData();
+//         dataToCompare[counter] = arrayValue;
+//         counter++;
 // }
-
-// printArray(generatedArray);
-
-int test(int[] array) {
-    int sum = array[0] + array[1];
-    return ;
-}
-
-int result = test(dataToCompare);
-Console.WriteLine(result);
+// Console.WriteLine($"This is Long time searched value - ${dataToCompare.Length}");
+// int[] test(int[] array) {
+//     return array;
+// }
+// Console.WriteLine(test(dataToCompare)[1]);
 
 
 
