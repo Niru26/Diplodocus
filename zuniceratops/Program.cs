@@ -4,21 +4,20 @@ int requestData() {
     return Convert.ToInt32(Console.ReadLine());
 }
 
-// int inputData = requestData();
-// Console.WriteLine(inputData);
-// int inputData = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine(inputData);
-int showMax() {
-    int inputData1 = requestData();
-    int inputData2 = requestData();
-    if (inputData1 > inputData2) {
-        return inputData1;
+void showMax() {
+    int maximumValue = requestData();
+    int minimumValue = requestData();
+    
+    if (minimumValue > maximumValue) {
+        maximumValue = minimumValue;
+        minimumValue = maximumValue;
     }
-    return inputData2;
+    Console.WriteLine($"Maximum value is {maximumValue} and minimum value is {minimumValue}");
 }
 
-int maxValue = showMax();
-Console.WriteLine(maxValue);
+showMax();
+
+
 
 
 
