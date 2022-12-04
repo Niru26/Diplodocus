@@ -72,14 +72,6 @@ showMaxArray(generatedArray);
 
 
 
-
-
-
-
-
-
-
-
 // int[] dataToCompare = new int[3];
 // int counter = 0;
 // while(counter < 3) {
