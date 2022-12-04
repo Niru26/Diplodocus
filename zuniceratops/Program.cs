@@ -5,7 +5,7 @@ int requestData() {
     return Convert.ToInt32(Console.ReadLine());
 }
 
-// void showMax() {
+// void showMaxNumber() {
 //     int maximumValue = requestData();
 //     int minimumValue = requestData();
     
@@ -18,7 +18,7 @@ int requestData() {
 //     Console.WriteLine($"Maximum value is {maximumValue} and minimum value is {minimumValue}.");
 // }
 
-// showMax();
+// showMaxNumber();
 // Console.WriteLine("End of task 2");
 // Console.WriteLine("");
 
@@ -39,21 +39,35 @@ int[] makeArray(int quntity) {
     return dataToCompare;
 }
 
-Console.WriteLine("Enter array size and .");
+Console.WriteLine("Enter array size and values.");
 int[] generatedArray = makeArray(requestData());
 
 Console.WriteLine("");
 void printArray(int[] array){
     int counter = 0;
     while(counter < array.Length) {
-    Console.WriteLine($"This is {counter} number of array - {array[counter]}");
+    Console.WriteLine($"This is {counter} index of array - {array[counter]}");
     counter++;
     }
 }
 
 printArray(generatedArray);
 
+void showMaxArray(int[] array){
+    int maxNumber = array[0];
+    int limit = array.Length;
 
+    for(int counter = 0; counter < limit; ++counter) {
+        if (maxNumber < array[counter]) {
+            maxNumber = array[counter];
+        }
+    }
+
+    // Console.WriteLine($"We found a maximum - {maxNumber}");
+    Console.WriteLine($"We found a maximum - {maxNumber}");
+}
+
+showMaxArray(generatedArray);
 
 
 
