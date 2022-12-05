@@ -23,51 +23,55 @@ int requestData() {
 // Console.WriteLine("");
 
 //Task 4
-Console.WriteLine("Task 4");
+// Console.WriteLine("Task 4");
 
-int[] makeArray(int quntity) {
-    int[] dataToCompare = new int[quntity];
-    int counter = 0;
+// int[] makeArray(int quntity) {
+//     int[] dataToCompare = new int[quntity];
+//     int counter = 0;
 
-    while (counter < quntity) {
-        int arrayValue = requestData();
-        dataToCompare[counter] = arrayValue;
+//     while (counter < quntity) {
+//         int arrayValue = requestData();
+//         dataToCompare[counter] = arrayValue;
         
-        counter++;
-    }
+//         counter++;
+//     }
 
-    return dataToCompare;
-}
+//     return dataToCompare;
+// }
 
-Console.WriteLine("Enter array size and values.");
-int[] generatedArray = makeArray(requestData());
+// Console.WriteLine("Enter array size and values.");
+// int[] generatedArray = makeArray(requestData());
 
+// Console.WriteLine("");
+// void printArray(int[] array){
+//     int counter = 0;
+//     while(counter < array.Length) {
+//     Console.WriteLine($"This is {counter} index of array - {array[counter]}");
+//     counter++;
+//     }
+// }
+
+// printArray(generatedArray);
+
+// void showMaxArray(int[] array){
+//     int maxNumber = array[0];
+//     int limit = array.Length;
+
+//     for(int counter = 0; counter < limit; ++counter) {
+//         if (maxNumber < array[counter]) {
+//             maxNumber = array[counter];
+//         }
+//     }
+
+//     Console.WriteLine($"We found a maximum - {maxNumber}");
+// }
+
+// showMaxArray(generatedArray);
+// Console.WriteLine("End of task 4");
 Console.WriteLine("");
-void printArray(int[] array){
-    int counter = 0;
-    while(counter < array.Length) {
-    Console.WriteLine($"This is {counter} index of array - {array[counter]}");
-    counter++;
-    }
-}
 
-printArray(generatedArray);
+Console.WriteLine("Task 6");
 
-void showMaxArray(int[] array){
-    int maxNumber = array[0];
-    int limit = array.Length;
-
-    for(int counter = 0; counter < limit; ++counter) {
-        if (maxNumber < array[counter]) {
-            maxNumber = array[counter];
-        }
-    }
-
-    // Console.WriteLine($"We found a maximum - {maxNumber}");
-    Console.WriteLine($"We found a maximum - {maxNumber}");
-}
-
-showMaxArray(generatedArray);
 
 
 
