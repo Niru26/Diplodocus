@@ -1,4 +1,5 @@
 ﻿Console.Clear();
+Console.WriteLine("Homework 2 by Rudakov N.");
 // //Task 10
 Console.WriteLine("Task 10");
 
