@@ -39,4 +39,3 @@ void sortArray(int[] array) {
 printArray(unsortedArray);
 sortArray(unsortedArray);
 printArray(unsortedArray);
-Console.WriteLine(unsortedArray.Length);
