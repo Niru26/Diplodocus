@@ -2,10 +2,9 @@
 Console.WriteLine("Homework 3 by Rudakov N.");
 // Console.WriteLine("Task 19");
 // // Task 19
-// string getData() {
-//     Console.Write("Enter single word o digital sequency: ");
-//     return Console.ReadLine();
-// }
+string getData() {
+    return Console.ReadLine();
+}
 
 // string[] turnOver(string value) {
 //     int arrayLength = Convert.ToInt32(value.Length);
@@ -33,7 +32,7 @@ Console.WriteLine("Homework 3 by Rudakov N.");
 //         return false;
 //     }
 // }
-
+//Console.Write("Enter single word o digital sequency: ");
 // string userData = getData();
 // string turnOverUserData = makeString(turnOver(userData));
 // Console.WriteLine(' ');
@@ -53,41 +52,57 @@ Console.WriteLine("Homework 3 by Rudakov N.");
 // Console.WriteLine("End task 19");
 // Console.WriteLine("");
 // //Task 21
-Console.WriteLine("Task 21");
+// Console.WriteLine("Task 21");
 
-double[] record3dDot () {
-    int arraySize = 3;
-    double[] dot = new double[arraySize];
-    for(int i = 0; i < arraySize; i++) {
-        double coordinat = Convert.ToDouble(Console.ReadLine());
-        dot[i] = coordinat;
+// double[] record3dDot () {
+//     int arraySize = 3;
+//     double[] dot = new double[arraySize];
+//     for(int i = 0; i < arraySize; i++) {
+//         double coordinat = Convert.ToDouble(Console.ReadLine());
+//         dot[i] = coordinat;
+//     }
+//     return dot;
+// }
+
+// void showArray(double[] array) {
+//     for (int i = 0; i < array.Length; i++) {
+//         Console.Write($"{array[i]}, ");
+//     }
+// }
+
+// void calculateDistance() {
+//     Console.WriteLine("Enter 1st dot coordinates:");
+//     double[] dot1 = record3dDot();
+//     Console.WriteLine("Enter 2nd dot coordinates:");
+//     double[] dot2 = record3dDot();
+
+//     double result = Math.Sqrt((Math.Pow((dot1[0] - dot2[0]),2) + Math.Pow((dot1[1] - dot2[1]),2)) + Math.Pow((dot1[2] - dot2[2]),2));
+
+//     Console.Write($"1st dot coordinates: ");
+//     showArray(dot1);
+//     Console.WriteLine("");
+//     Console.Write($"2nd dot coordinates: ");
+//     showArray(dot2);
+//     Console.WriteLine("");
+//     Console.WriteLine($"Distanse between this dots equals to: {Math.Round((result),2)}");
+// }
+
+// calculateDistance();
+// Console.WriteLine("End task 21");
+// Console.WriteLine("");
+// //Task 23
+Console.WriteLine("Task 23");
+
+void exponentiationNumber (int N) {
+    double number = Convert.ToDouble(getData());
+    int power = 3;
+    for (int i = 1; i <= N; i++ ) {
+    double result = 1;
+        for (int j = 1; j <= power; j++) {
+            result = result * Math.Pow(j, 3);
+            Console.WriteLine($"{result}");
+        }
     }
-    return dot;
 }
 
-void showArray(double[] array) {
-    for (int i = 0; i < array.Length; i++) {
-        Console.Write($"{array[i]}, ");
-    }
-}
-
-void calculateDistance() {
-    Console.WriteLine("Enter 1st dot coordinates:");
-    double[] dot1 = record3dDot();
-    Console.WriteLine("Enter 2nd dot coordinates:");
-    double[] dot2 = record3dDot();
-
-    double result = Math.Sqrt((Math.Pow((dot1[0] - dot2[0]),2) + Math.Pow((dot1[1] - dot2[1]),2)) + Math.Pow((dot1[2] - dot2[2]),2));
-
-    Console.Write($"1st dot coordinates: ");
-    showArray(dot1);
-    Console.WriteLine("");
-    Console.Write($"2nd dot coordinates: ");
-    showArray(dot2);
-    Console.WriteLine("");
-    Console.WriteLine($"Distanse between this dots equals to: {Math.Round((result),2)}");
-}
-
-calculateDistance();
-Console.WriteLine("End task 21");
-Console.WriteLine("");
+exponentiationNumber(3);
