@@ -7,6 +7,7 @@ string getData() {
 }
 
 string[] turnOver(string value) {
+
     int arrayLength = Convert.ToInt32(value.Length);
     string[] outputArray = new string[arrayLength];
 
@@ -99,7 +100,9 @@ void exponentiationNumber () {
     for (int i = 1; i <= N; i++ ) {
     double result = i;
     
-        result = Math.Pow(i, power);
+        for(int j = 1; j < power; j++) {
+            result *= i;
+        }      
         
         Console.Write($"{result}, ");
     }
