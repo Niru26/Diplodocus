@@ -26,10 +26,53 @@
 // }
 
 Console.Clear();
-Console.WriteLine("Workshop 5");
+Console.WriteLine("Workshop 4 2D-array & recursion");
 
+// string[,] table = new string[2, 3];
+// //assign 
+// table[0, 2] = "word";
+// //show array using loop in loop
 
+// for(int rows = 0; rows < table.GetLength(0); rows++) {
+//     for(int columns = 0; columns < table.GetLength(1); columns++){
+//         Console.Write($"*{table[rows, columns]}* ");
+//     }
+//     Console.WriteLine(' ');
+// }
 
+// int[,] table = new int[2, 3];
+// //assign 
+// table[0, 1] = 5;
+// //show array using loop in loop
+
+// for(int rows = 0; rows < table.GetLength(0); rows++) {
+//     for(int columns = 0; columns < table.GetLength(1); columns++){
+//         Console.Write($"{table[rows, columns]} ");
+//     }
+//     Console.WriteLine(' ');
+// }
+// // Factorial
+// int factorial (int n) {
+//     if (n == 1) {
+//         return 1;
+//     } else {
+//         return n * factorial(n - 1);
+//     }
+// }
+
+// Console.WriteLine(factorial(5));
+
+int Fibbanci (int n) {
+    if(n == 1 || n == 2) {
+        return n = 1;
+    } else {
+        return Fibbanci (n - 1) + Fibbanci (n - 2);
+    }
+}
+
+for (int i = 1; i <= 20; i++){
+    Console.WriteLine($"{i} - {Fibbanci(i)}");
+}
 
 
 
