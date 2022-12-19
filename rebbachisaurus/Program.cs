@@ -97,14 +97,15 @@ double[] generateDoubleArray() {
 }
 
 double[] sortArray(double[] array) {
-    int minimumIndex = 0;
-   
-    for (int i = 1; i < array.Length; i++) {
-        if(array[i] < array[minimumIndex]) {
-            double temporary = array[i];
-            array[i] = array[minimumIndex];
-            array[minimumIndex] = temporary;
-            minimumIndex = i;
+    for (int i = 0; i < array.Length - 1; i++) {
+    int minimumIndex = i;
+        for(int j = i + 1; j < array.Length; j++){
+           if(array[j] < array[minimumIndex]) {
+            minimumIndex = j;     
+        }
+        double temporary = array[i];
+        array[i] = array[minimumIndex];
+        array[minimumIndex] = temporary;
         }
     }
     return array;
@@ -117,6 +118,5 @@ double[] sorted = sortArray(result);
 showDoubleArray(sorted);
 
 
-// double alternate = new Random().Next(10, 100) + roundedValue;
-// Console.WriteLine(alternate);
+
 
