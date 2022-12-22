@@ -51,3 +51,4 @@ void checkCrossing() {
     Console.WriteLine($"Crossing coordinates: {roundedX}; {roundedY}");
 }
 checkCrossing();
+Console.WriteLine("End Task 43");
