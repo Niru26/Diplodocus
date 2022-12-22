@@ -61,18 +61,25 @@ Console.WriteLine("Workshop 4 2D-array & recursion");
 // }
 
 // Console.WriteLine(factorial(5));
+// Recursion - Fibbanaci number
+// int Fibbanci (int n) {
+//     if(n == 1 || n == 2) {
+//         return n = 1;
+//     } else {
+//         return Fibbanci (n - 1) + Fibbanci (n - 2);
+//     }
+// }
 
-int Fibbanci (int n) {
-    if(n == 1 || n == 2) {
-        return n = 1;
-    } else {
-        return Fibbanci (n - 1) + Fibbanci (n - 2);
-    }
-}
+// for (int i = 1; i <= 20; i++){
+//     Console.WriteLine($"{i} - {Fibbanci(i)}");
+// }
 
-for (int i = 1; i <= 20; i++){
-    Console.WriteLine($"{i} - {Fibbanci(i)}");
-}
+string myString = "0";
+int i = 5;
+
+myString = myString + i;
+Console.WriteLine(myString);
+Console.WriteLine(myString*2);
 
 
 
