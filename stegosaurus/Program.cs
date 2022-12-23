@@ -1,5 +1,5 @@
 ﻿Console.Clear();
-
+Console.WriteLine("Workshop 7 2D-array");
 // Задача 1
 // Console.Write($"Enter your number one ");
 // int number1 = Convert.ToInt32(Console.ReadLine());
@@ -24,10 +24,6 @@
 //     Console.Write($"{counter} ");
 //     counter++;
 // }
-
-Console.Clear();
-Console.WriteLine("Workshop 4 2D-array & recursion");
-
 // string[,] table = new string[2, 3];
 // //assign 
 // table[0, 2] = "word";
@@ -62,17 +58,17 @@ Console.WriteLine("Workshop 4 2D-array & recursion");
 
 // Console.WriteLine(factorial(5));
 
-int Fibbanci (int n) {
-    if(n == 1 || n == 2) {
-        return n = 1;
-    } else {
-        return Fibbanci (n - 1) + Fibbanci (n - 2);
-    }
-}
+// int Fibbanci (int n) {
+//     if(n == 1 || n == 2) {
+//         return n = 1;
+//     } else {
+//         return Fibbanci (n - 1) + Fibbanci (n - 2);
+//     }
+// }
 
-for (int i = 1; i <= 20; i++){
-    Console.WriteLine($"{i} - {Fibbanci(i)}");
-}
+// for (int i = 1; i <= 20; i++){
+//     Console.WriteLine($"{i} - {Fibbanci(i)}");
+// }
 
 
 
