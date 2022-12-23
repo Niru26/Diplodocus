@@ -25,8 +25,8 @@
 //     counter++;
 // }
 
-Console.Clear();
-Console.WriteLine("Workshop 4 2D-array & recursion");
+// Console.Clear();
+// Console.WriteLine("Workshop 4 2D-array & recursion");
 
 // string[,] table = new string[2, 3];
 // //assign 
@@ -73,13 +73,43 @@ Console.WriteLine("Workshop 4 2D-array & recursion");
 // for (int i = 1; i <= 20; i++){
 //     Console.WriteLine($"{i} - {Fibbanci(i)}");
 // }
+// string myString = "0";
+// int i = 5;
+// myString = myString + i;
+// Console.WriteLine(myString);
+int getIntData() {
+    return Convert.ToInt32(Console.ReadLine());
+}
 
-string myString = "0";
-int i = 5;
+Console.WriteLine("Enter number of rows:");
+int rows = getIntData();
+Console.WriteLine("Enter number of columns:");
+int columns = getIntData();
+Console.WriteLine("Enter minimum value:");
+int minimum = getIntData();
+Console.WriteLine("Enter maximum value:");
+int maximum = getIntData();
 
-myString = myString + i;
-Console.WriteLine(myString);
-Console.WriteLine(myString*2);
+int[,] generate2dRandomArray() {
+    int[,] array = new int[rows, columns];
 
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < columns; j++) {
+            array[i, j] = new Random().Next(minimum, maximum);
+        }
+    }
+    return array;
+}
 
+void show2dArray(int[,] array) {
+    for(int i = 0; i < array.GetLength(0); i++) {
+        for(int j = 0; j < array.GetLength(1); j++){
+            Console.Write(array[i, j] + "\t");
+        }
+        Console.WriteLine(' ');
+        Console.WriteLine(' ');
+    }
+}
 
+show2dArray(generate2dRandomArray());
+ 
