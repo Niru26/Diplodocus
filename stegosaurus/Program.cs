@@ -77,39 +77,54 @@
 // int i = 5;
 // myString = myString + i;
 // Console.WriteLine(myString);
-int getIntData() {
-    return Convert.ToInt32(Console.ReadLine());
+// int getIntData() {
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// Console.WriteLine("Enter number of rows:");
+// int rows = getIntData();
+// Console.WriteLine("Enter number of columns:");
+// int columns = getIntData();
+// Console.WriteLine("Enter minimum value:");
+// int minimum = getIntData();
+// Console.WriteLine("Enter maximum value:");
+// int maximum = getIntData();
+
+// int[,] generate2dRandomArray() {
+//     int[,] array = new int[rows, columns];
+
+//     for(int i = 0; i < rows; i++){
+//         for(int j = 0; j < columns; j++) {
+//             array[i, j] = new Random().Next(minimum, maximum);
+//         }
+//     }
+//     return array;
+// }
+
+// void show2dArray(int[,] array) {
+//     for(int i = 0; i < array.GetLength(0); i++) {
+//         for(int j = 0; j < array.GetLength(1); j++){
+//             Console.Write(array[i, j] + "\t");
+//         }
+//         Console.WriteLine(' ');
+//         Console.WriteLine(' ');
+//     }
+// }
+
+// show2dArray(generate2dRandomArray());
+
+string caption = "C# sucks!!!";
+int sreenWidthPosition = (Console.WindowWidth - caption.Length) / 2;
+int sreenHightPosition = (Console.WindowHeight)/2;
+
+void drawCaption (string text, int left, int top) {
+    Console.SetCursorPosition(left, top);
+    Console.WriteLine(caption);
 }
-
-Console.WriteLine("Enter number of rows:");
-int rows = getIntData();
-Console.WriteLine("Enter number of columns:");
-int columns = getIntData();
-Console.WriteLine("Enter minimum value:");
-int minimum = getIntData();
-Console.WriteLine("Enter maximum value:");
-int maximum = getIntData();
-
-int[,] generate2dRandomArray() {
-    int[,] array = new int[rows, columns];
-
-    for(int i = 0; i < rows; i++){
-        for(int j = 0; j < columns; j++) {
-            array[i, j] = new Random().Next(minimum, maximum);
-        }
-    }
-    return array;
-}
-
-void show2dArray(int[,] array) {
-    for(int i = 0; i < array.GetLength(0); i++) {
-        for(int j = 0; j < array.GetLength(1); j++){
-            Console.Write(array[i, j] + "\t");
-        }
-        Console.WriteLine(' ');
-        Console.WriteLine(' ');
-    }
-}
-
-show2dArray(generate2dRandomArray());
  
+drawCaption(
+    text: caption, 
+    left: sreenWidthPosition, 
+    top: sreenHightPosition
+    );
+
