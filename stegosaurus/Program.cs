@@ -1,5 +1,5 @@
 ﻿Console.Clear();
-
+Console.WriteLine("Workshop 7 2D-array");
 // Задача 1
 // Console.Write($"Enter your number one ");
 // int number1 = Convert.ToInt32(Console.ReadLine());
