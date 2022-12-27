@@ -118,13 +118,13 @@ void show2DIntegerArray(int[,] array)
 
 double[] createColumnsAverageValueArray(int[,] array)
 {
-    double[] arrayOfAverage = new double[];
+    double[] arrayOfAverage = new double[columnsAmount];
     for (int i = 0; i < array.GetLength(1); i++)
     {
         double sum = 0;
         for (int j = 0; j < array.GetLength(0); j++)
         {
-            sum = sum + array[i,j];
+            sum = sum + array[j,i];
         }
         double columnAverage = sum / rowsAmount;
         arrayOfAverage[i] = Math.Round(columnAverage, 2);
