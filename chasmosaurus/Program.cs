@@ -72,5 +72,23 @@ void show2dIntegerArray(int[,] array)
 // Task 56
 Console.WriteLine("Task 56");
 
-int sumRow
+void sumOfRowValues(int[,] array) {
+    int sumValuesResultMin = 0;
+    int sumValuesResultCurrent = 0;
+    int rowPosition = 0;
+    for(int i = 0; i < array.GetLength(0); i++) {
+        for(int j = 0; j < array.GetLength(1); j++) {
+            sumValuesResultCurrent += array[i,j];
+        }
+        if(sumValuesResultCurrent < sumValuesResultMin) {
+            rowPosition = i;
+        }
+    }
+
+    Console.WriteLine($"Row with smallest summary is: {rowPosition + 1}");
+}
+
+int task56initialArray = generate2dIntegerArray();
+show2dIntegerArray(task56initialArray);
+sumOfRowValues(task56initialArray);
 
