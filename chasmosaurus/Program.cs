@@ -134,29 +134,53 @@ int[] unwrapingMatixbyRow(int[,] array)
 {
     int arraySize = array.GetLength(0) * array.GetLength(1);
     int[] rowsInArray = new int[arraySize];
+    int step = 0;
+
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        int step = 0;
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            rowsInArray[step + j] += array[i, j];
+            rowsInArray[step + j] = array[i, j];
         }
         step += array.GetLength(1);
     }
     return rowsInArray;
 }
 
+int[] unwrapingMatixbyColumn(int[,] array)
+{
+    int arraySize = array.GetLength(0) * array.GetLength(1);
+    int[] columnsInArray = new int[arraySize];
+    int step = 0;
+
+    for (int i = 0; i < array.GetLength(1); i++)
+    {
+        for (int j = 0; j < array.GetLength(0); j++)
+        {
+            columnsInArray[step + j] = array[j, i];
+        }
+        step += array.GetLength(0);
+    }
+    return columnsInArray;
+}
+
 void show1dArray(int[] array)
 {
-    Console.Write("Row value sequence: ");
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write(array[i] + ' ');
+        Console.Write($"{array[i]} ");
     }
 }
 
 show2dIntegerArray(matrixA);
 int[] unrapedByRow = unwrapingMatixbyRow(matrixA);
+int[] unrapedByColumn = unwrapingMatixbyColumn(matrixA);
+Console.Write("Row value sequence: ");
 show1dArray(unrapedByRow);
+Console.WriteLine(' ');
+Console.Write("Column value sequence: ");
+show1dArray(unrapedByColumn);
+
+// Console.WriteLine(matrixA.GetLength(1));
 
 
