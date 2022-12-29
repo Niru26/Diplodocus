@@ -70,53 +70,93 @@ void show2dIntegerArray(int[,] array)
 // show2dIntegerArray(sortedArray);
 // Console.WriteLine("End task 54");
 // Task 56
-Console.WriteLine("Task 56");
+// Console.WriteLine("Task 56");
 
 
-void showRowSum(int[,] array)
+// void showRowSum(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         int sumRow = 0;
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             sumRow += array[i, j];
+//         }
+//         Console.WriteLine($"{i + 1} row sum equal to: {sumRow}");
+//     }
+//     Console.WriteLine(' ');
+// }
+
+// int[] makeRowSumArray(int[,] array)
+// {
+//     int[] rowSummary = new int[array.GetLength(0)];
+
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         int sumRow = 0;
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             sumRow += array[i, j];
+//         }
+//         rowSummary[i] = sumRow;
+//     }
+//     return rowSummary;
+// }
+
+// void showMinimumSumRowNumber(int[] array)
+// {
+//     int minimumIndex = 0;
+//     for (int i = 1; i < array.Length; i++)
+//     {
+//         if (array[minimumIndex] > array[i])
+//         {
+//             minimumIndex = i;
+//         }
+//     }
+//     Console.WriteLine($"Row number with minimum sum is: {minimumIndex + 1}");
+// }
+
+// int[,] task56initialArray = generate2dIntegerArray();
+// show2dIntegerArray(task56initialArray);
+// int[] rowSumArray = makeRowSumArray(task56initialArray);
+// showRowSum(task56initialArray);
+// showMinimumSumRowNumber(rowSumArray);
+// Console.WriteLine("End task 56");
+//Task 58
+Console.WriteLine("Task 58");
+int[,] matrixA = generate2dIntegerArray();
+// int[,] matrixB = generate2dIntegerArray();
+
+// matrixC[i, j] = matrixA[i, j] * matrixB[j, i] + matrixA[i, j + 1] * matrixB[j, i + 1] + matrixA[i, j + 2] * matrixB[j, i + 2];
+// matrixC[i, j + 1] = matrixA[i, j] * matrixB[j + 1, i] + matrixA[i, j + 1] * matrixB[j + 1, i + 1] + matrixA[i, j + 2] * matrixB[j + 1, i + 2];
+
+int[] unwrapingMatixbyRow(int[,] array)
 {
+    int arraySize = array.GetLength(0) * array.GetLength(1);
+    int[] rowsInArray = new int[arraySize];
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        int sumRow = 0;
+        int step = 0;
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            sumRow += array[i, j];
+            rowsInArray[step + j] += array[i, j];
         }
-        Console.WriteLine($"{i + 1} row sum equal to: {sumRow}");
+        step += array.GetLength(1);
     }
-    Console.WriteLine(' ');
+    return rowsInArray;
 }
 
-int[] makeRowSumArray(int[,] array)
+void show1dArray(int[] array)
 {
-    int[] rowSummary = new int[array.GetLength(0)];
-
-    for (int i = 0; i < array.GetLength(0); i++)
+    Console.Write("Row value sequence: ");
+    for (int i = 0; i < array.Length; i++)
     {
-        int sumRow = 0;
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            sumRow += array[i, j];
-        }
-        rowSummary[i] = sumRow;
+        Console.Write(array[i] + ' ');
     }
-    return rowSummary;
 }
 
-void showMinimumSumRowNumber(int[] array) {
-    int minimumIndex = 0;
-    for(int i = 1; i < array.Length; i++) {
-        if(array[minimumIndex] > array[i]){
-            minimumIndex = i;
-        }
-    }
-    Console.WriteLine($"Row number with minimum sum is: {minimumIndex + 1}");
-}
-
-int[,] task56initialArray = generate2dIntegerArray();
-show2dIntegerArray(task56initialArray);
-int[] rowSumArray = makeRowSumArray(task56initialArray);
-showRowSum(task56initialArray);
-showMinimumSumRowNumber(rowSumArray);
+show2dIntegerArray(matrixA);
+int[] unrapedByRow = unwrapingMatixbyRow(matrixA);
+show1dArray(unrapedByRow);
 
 
