@@ -184,3 +184,25 @@ show1dArray(unrapedByColumn);
 // Console.WriteLine(matrixA.GetLength(1));
 
 
+//theory
+
+void matrixMultiply(int[,] matrixA, int[,] matrixB)
+{
+    int matrixAcolumns = matrixA.GetLength(1);
+    int matrixBrows = matrixB.GetLength(0);
+    int matrixArows = matrixA.GetLength(0);
+    int matrixBcolumns = matrixB.GetLength(1);
+    int[,] matrixC = new int[matrixArows, matrixBcolumns];
+    if (matrixAcolumns == matrixBrows)
+    {
+        while (matrixBcolumns > 0)
+        {
+            for (int i = 0, j = 0; j < matrixArows; j++)
+            {
+                    matrixA[i,j] * matrixB[j,i];
+
+            }
+
+        }
+    }
+}
