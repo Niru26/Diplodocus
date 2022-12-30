@@ -123,14 +123,14 @@ void show2dIntegerArray(int[,] array)
 // showMinimumSumRowNumber(rowSumArray);
 // Console.WriteLine("End task 56");
 //Task 58
-Console.WriteLine(' ');
-Console.WriteLine("Task 58");
-Console.WriteLine("Create A matrix:");
-int[,] matrixA = generate2dIntegerArray();
-// int[,] matrixA = { { 2, 4 }, { 3, 2 } };
-Console.WriteLine("Create B matrix:");
-int[,] matrixB = generate2dIntegerArray();
-// int[,] matrixB = { { 3, 4 }, { 3, 3 } };
+// Console.WriteLine(' ');
+// Console.WriteLine("Task 58");
+// Console.WriteLine("Create A matrix:");
+// int[,] matrixA = generate2dIntegerArray();
+// // int[,] matrixA = { { 2, 4 }, { 3, 2 } };
+// Console.WriteLine("Create B matrix:");
+// int[,] matrixB = generate2dIntegerArray();
+// // int[,] matrixB = { { 3, 4 }, { 3, 3 } };
 
 void show1dArray(int[] array)
 {
@@ -140,56 +140,73 @@ void show1dArray(int[] array)
     }
 }
 
-Console.WriteLine("A matrix");
-show2dIntegerArray(matrixA);
-Console.WriteLine("B matrix");
-show2dIntegerArray(matrixB);
+// Console.WriteLine("A matrix");
+// show2dIntegerArray(matrixA);
+// Console.WriteLine("B matrix");
+// show2dIntegerArray(matrixB);
 
-void matrixMultiply(int[,] matrixA, int[,] matrixB)
+// void matrixMultiply(int[,] matrixA, int[,] matrixB)
+// {
+//     int matrixAcolumns = matrixA.GetLength(1);
+//     int matrixBrows = matrixB.GetLength(0);
+//     int matrixArows = matrixA.GetLength(0);
+//     int matrixBcolumns = matrixB.GetLength(1);
+//     int[,] matrixC = new int[matrixArows, matrixBcolumns];
+
+//     if (matrixAcolumns == matrixBrows)
+//     {
+//         for (int i = 0; i < matrixArows; i++)
+//         {
+//             for (int k = 0; k < matrixBcolumns; k++)
+//             {
+//                 // Console.WriteLine($"New J loop");
+//                 for (int j = 0; j < matrixBcolumns; j++)
+//                 {
+//                     matrixC[i, k] += matrixA[i, j] * matrixB[j, k];
+//                     // Console.WriteLine($"Cycle J: i -> {i}, j -> {j} k -> {k}");
+//                 }
+//             }
+//         }
+//     }
+//     else
+//     {
+//         Console.WriteLine(' ');
+//         Console.WriteLine("Wrong matrix data");
+//         return;
+//     }
+//     Console.WriteLine("Matrix multiply result:");
+//     show2dIntegerArray(matrixC);
+// }
+
+// matrixMultiply(matrixA, matrixB);
+// Console.WriteLine("End task 58");
+// Task 60
+Console.WriteLine("Task 60");
+
+int[] fillArray()
 {
-    int matrixAcolumns = matrixA.GetLength(1);
-    int matrixBrows = matrixB.GetLength(0);
-    int matrixArows = matrixA.GetLength(0);
-    int matrixBcolumns = matrixB.GetLength(1);
-    int[,] matrixC = new int[matrixArows, matrixBcolumns];
-
-    if (matrixAcolumns == matrixBrows)
+    int size = 90;
+    int[] result = new int[size];
+    int start = 10;
+    for (int i = 0; i < size; i++)
     {
-        for (int i = 0; i < matrixArows; i++)
-        {
-            for (int k = 0; k < matrixBcolumns; k++)
-            {
-                // Console.WriteLine($"New J loop");
-                for (int j = 0; j < matrixBcolumns; j++)
-                {
-                    matrixC[i, k] += matrixA[i, j] * matrixB[j, k];
-                    // Console.WriteLine($"Cycle J: i -> {i}, j -> {j} k -> {k}");
-                }
-            }
-        }
+        result[i] = start + i;
     }
-    else
-    {
-        Console.WriteLine(' ');
-        Console.WriteLine("Wrong matrix data");
-        return;
-    }
-    Console.WriteLine("Matrix multiply result:");
-    show2dIntegerArray(matrixC);
+    return result;
 }
 
-matrixMultiply(matrixA, matrixB);
+
 
 
 
 // Draft
-// int[] unrapedByRow = unwrapingMatixbyRow(matrixA);
-// int[] unrapedByColumn = unwrapingMatixbyColumn(matrixB);
-// Console.Write("Row value sequence: ");
-// show1dArray(unrapedByRow);
-// Console.WriteLine(' ');
-// Console.Write("Column value sequence: ");
-// show1dArray(unrapedByColumn);
+//  int[] unrapedByRow = unwrapingMatixbyRow(matrixA);
+//  int[] unrapedByColumn = unwrapingMatixbyColumn(matrixB);
+//  Console.Write("Row value sequence: ");
+//  show1dArray(unrapedByRow);
+//  Console.WriteLine(' ');
+//  Console.Write("Column value sequence: ");
+//  show1dArray(unrapedByColumn);
 // int[] unwrapingMatixbyRow(int[,] array)
 // {
 //     int arraySize = array.GetLength(0) * array.GetLength(1);
