@@ -123,12 +123,14 @@ void show2dIntegerArray(int[,] array)
 // showMinimumSumRowNumber(rowSumArray);
 // Console.WriteLine("End task 56");
 //Task 58
+Console.WriteLine(' ');
 Console.WriteLine("Task 58");
-int[,] matrixA = generate2dIntegerArray();
+Console.WriteLine("Create A matrix:");
+//int[,] matrixA = generate2dIntegerArray();
+int[,] matrixA = { { 2, 4 }, { 3, 2 } };
+Console.WriteLine("Create B matrix:");
 // int[,] matrixB = generate2dIntegerArray();
-
-// matrixC[i, j] = matrixA[i, j] * matrixB[j, i] + matrixA[i, j + 1] * matrixB[j, i + 1] + matrixA[i, j + 2] * matrixB[j, i + 2];
-// matrixC[i, j + 1] = matrixA[i, j] * matrixB[j + 1, i] + matrixA[i, j + 1] * matrixB[j + 1, i + 1] + matrixA[i, j + 2] * matrixB[j + 1, i + 2];
+int[,] matrixB = { { 3, 4 }, { 3, 3 } };
 
 int[] unwrapingMatixbyRow(int[,] array)
 {
@@ -172,41 +174,58 @@ void show1dArray(int[] array)
     }
 }
 
+Console.WriteLine("A matrix");
 show2dIntegerArray(matrixA);
-int[] unrapedByRow = unwrapingMatixbyRow(matrixA);
-int[] unrapedByColumn = unwrapingMatixbyColumn(matrixA);
-Console.Write("Row value sequence: ");
-show1dArray(unrapedByRow);
+Console.WriteLine("B matrix");
+show2dIntegerArray(matrixB);
+// int[] unrapedByRow = unwrapingMatixbyRow(matrixA);
+// int[] unrapedByColumn = unwrapingMatixbyColumn(matrixB);
+// Console.Write("Row value sequence: ");
+// show1dArray(unrapedByRow);
+// Console.WriteLine(' ');
+// Console.Write("Column value sequence: ");
+// show1dArray(unrapedByColumn);
 Console.WriteLine(' ');
-Console.Write("Column value sequence: ");
-show1dArray(unrapedByColumn);
-
-// Console.WriteLine(matrixA.GetLength(1));
-
-
-//theory
 
 void matrixMultiply(int[,] matrixA, int[,] matrixB)
 {
     int matrixAcolumns = matrixA.GetLength(1);
+    Console.WriteLine($"MatrixAcolumns - {matrixAcolumns}");
     int matrixBrows = matrixB.GetLength(0);
+    Console.WriteLine($"MatrixBrows - {matrixBrows}");
     int matrixArows = matrixA.GetLength(0);
+    Console.WriteLine($"MatrixArows - {matrixArows}");
     int matrixBcolumns = matrixB.GetLength(1);
+    Console.WriteLine($"MatrixBcolumns - {matrixBcolumns}");
     int[,] matrixC = new int[matrixArows, matrixBcolumns];
+    Console.WriteLine($"MatrixC dimensions: rows -> {matrixArows}, columns -> {matrixBcolumns}");
+    Console.WriteLine(' ');
     if (matrixAcolumns == matrixBrows)
     {
-
+        for (int i = 0; i < matrixArows; i++)
         {
-            for (int i = 0; i < matrixArows; i++)
+            Console.WriteLine($"New J loop");
+            for (int k = 0; k < matrixBcolumns; k++)
             {
-                while (matrixBcolumns > 0)
+                for (int j = 0; j < matrixBcolumns; j++)
                 {
-                    for(int j = 0; j < matrixBcolumns;)
-                    matrixA[i, j] * matrixB[j, i];
-                    matrixBcolumns--;
+                    matrixC[i, k] += matrixA[i, j] * matrixB[j, k];
+                    Console.WriteLine($"Cycle J: i -> {i}, j -> {j} k -> {k}");
                 }
-
             }
+            Console.WriteLine(' ');
         }
     }
+    else
+    {
+        Console.WriteLine(' ');
+        Console.WriteLine("Wrong matrix data");
+        return;
+    }
+    Console.WriteLine(' ');
+    Console.WriteLine("Matrix multiply result:");
+    show2dIntegerArray(matrixC);
 }
+
+
+matrixMultiply(matrixA, matrixB);
