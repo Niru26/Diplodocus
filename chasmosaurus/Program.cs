@@ -195,14 +195,18 @@ void matrixMultiply(int[,] matrixA, int[,] matrixB)
     int[,] matrixC = new int[matrixArows, matrixBcolumns];
     if (matrixAcolumns == matrixBrows)
     {
-        while (matrixBcolumns > 0)
+
         {
-            for (int i = 0, j = 0; j < matrixArows; j++)
+            for (int i = 0; i < matrixArows; i++)
             {
-                    matrixA[i,j] * matrixB[j,i];
+                while (matrixBcolumns > 0)
+                {
+                    for(int j = 0; j < matrixBcolumns;)
+                    matrixA[i, j] * matrixB[j, i];
+                    matrixBcolumns--;
+                }
 
             }
-
         }
     }
 }
