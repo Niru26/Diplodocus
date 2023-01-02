@@ -1,7 +1,7 @@
 ﻿Console.Clear();
 Console.WriteLine("Homework 9 by Rudakov N.");
 //Task 64
-Console.WriteLine("Task 64");
+// Console.WriteLine("Task 64");
 
 int getInt32Data()
 {
@@ -27,14 +27,13 @@ Console.WriteLine("Enter N range:");
 int rangeStart = getInt32Data();
 int rangeFinish = getInt32Data();
 
-int findSumInRange(int start, int finish, int summary)
+int findSumInRange(int start, int finish)
 {
     if (start < finish)
     {
-        summary = summary + start;
-        findSumInRange(start + 1, finish, summary);
+        return start + findSumInRange(start + 1, finish);
     }
-    return summary;
+    return start;    
 }
 
-Console.WriteLine(findSumInRange(rangeStart, rangeFinish, 1));
+Console.WriteLine(findSumInRange(rangeStart, rangeFinish));
