@@ -58,12 +58,12 @@
 // int sumLimit = Convert.ToInt32(Console.ReadLine());
 // int result = getSum(sumLimit);
 // Console.WriteLine($"Summary - {result}");
-int enterNumber() {
-    return Convert.ToInt32(Console.ReadLine());
-}
+// int enterNumber() {
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
 // void countNumbers () {
-    
+
 //     string number = enterNumber();
 //     Console.WriteLine($"This is a count of numbers {number.Length}");
 // }
@@ -82,24 +82,63 @@ int enterNumber() {
 
 // findFactorial(enterNumber());
 
-int[] fillArray(int size, int minValue, int maxValue) {
-    int[] finalArray = new int[size];
+// int[] fillArray(int size, int minValue, int maxValue) {
+//     int[] finalArray = new int[size];
 
-    for (int i = 0; i < size; i++) {
-        finalArray[i] = new Random().Next(minValue, maxValue + 1);
+//     for (int i = 0; i < size; i++) {
+//         finalArray[i] = new Random().Next(minValue, maxValue + 1);
+//     }
+//     return finalArray;
+// }
+
+
+
+// void showArray (int[] array) {
+//     for (int i = 0; i < array.Length; i++) {
+//         Console.Write($"{array[i]} ");
+//     }
+// }
+
+// showArray(fillArray(enterNumber(), enterNumber(), enterNumber()));
+
+// string word = "Hello world";
+// string myName = "Nikolay";
+// Console.WriteLine(word.Length);
+// string[] arrayOfStrings = new string[2];
+// arrayOfStrings[0] = word;
+// arrayOfStrings[1] = myName;
+
+// void showArray(string[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write($"{array[i]} ");
+//     }
+// }
+
+// showArray(arrayOfStrings);
+
+int n = 140;
+Console.WriteLine(n);
+int m = 175;
+Console.WriteLine(m);
+int count = m * n;
+
+while (m != n)
+{
+    if (n > m)
+    {
+        n = n - m;
     }
-    return finalArray;
+    else
+    {
+        m = m - n;
+    }
 }
 
+Console.WriteLine(count / n);
 
 
-void showArray (int[] array) {
-    for (int i = 0; i < array.Length; i++) {
-        Console.Write($"{array[i]} ");
-    }
-}
-
-showArray(fillArray(enterNumber(), enterNumber(), enterNumber()));
 
 
 
